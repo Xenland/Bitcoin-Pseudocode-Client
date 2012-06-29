@@ -1,33 +1,99 @@
 <html>
     <head>
         <title>Bitcoin Pseudocode Client</title>
+		<style type="text/css">
+			.information{
+				margin-left:2em;
+				margin-bottom:2em;
+			}
+			.pseudocode{
+				border:3px dashed #c6c6c6;
+				background-image: url('images/pseudocode.png');
+				padding:0em 1em 1em 1em;
+				font-family:Century Gothic;
+			}
+		
+			.pseudocode-title{
+				color:#FFF;
+				background:#c6c6c6;
+				
+				font-size:120%;
+				font-family:‘Arial Black’;
+				
+				margin-top:1em;
+				margin-bottom:1em;
+				
+				
+				padding:0.5em;
+				
+				width:7em;
+			}
+		</style>
     </head>
     <body>
 		<h1>Bitcoin Pseudocode Client - Open collaborative project</h1>
 		
 		<br/><br/>
-		<h3>Verifying a Bitcoin address</h3>
-        <div>
-            input_address = 1PZoWjye1Xa1e1NSNYmKuxEJYGvcnJro7p
+		<h2>Verifying a Bitcoin address</h2>
+		<div class="information">
+			*Bitcoin addresses can be up to 34 Characters.
+			<br/>
+			*Bitcoin addresses are most often 33 or 34 characters long with 34 being the max length. (Source: <a href="https://en.bitcoin.it/wiki/List_of_address_prefixes">Bitcoin.it/wiki/List of address prefixes</a>)
+		</div>
+		
+        <div class="pseudocode" style="width:30em;">
+			<div class="pseudocode-title">
+				Pseudo Code
+			</div>
+            <b style="color:blue;">input_address</b> = <span style="color:purple;">1PZoWjye1Xa1e1NSNYmKuxEJYGvcnJro7p</span>;
             <br/>
-            address_valid = true
+            <b style="color:blue;">address_valid</b> = <span style="color:purple;">true</span>;
             <br/><br/>
-            if input_address contains the following characters 0OIl
+            <b>if</b> <b style="color:blue;">input_address</b> <b>contains</b> the following characters <i style="color:green;">0 O I l</i>
             <br/>
-            address_valid = false
+            <b>address_valid</b> = <span style="color:purple;">false</span>;
             <br/><br/>
             
-            if input_address string length is less then 27 characters
+            <b>if</b> <b style="color:blue;">input_address</b> string length is <b>greater than</b> <i style="color:purple;">34</i>
             <br/>
-            address_valid = false
+            <b style="color:blue;">address_valid</b> = <span style="color:purple;"> false</span>;
             <br/><br/>
             
-            if input_address first character is not a number 1 (one)
+            <b>if</b> <b style="color:blue;">input_address</b> first character is not a <i style="color:purple;">number 1</i>
             <br/>
-            address_valid = false
+            <b style="color:blue;">address_valid</b> = <span style="color:purple;"> false</span>;
             <br/><br/>
         
-            return address_valid
+            <b>return</b> <b style="color:blue;">address_valid</b><br/>
         </div>
+		
+		<br/><br/><br/>
+		
+		<h2>Create a Bitcoin address</h2>
+		Resources List: <a href="https://en.bitcoin.it/wiki/Technical_background_of_Bitcoin_addresses" target="_BLANK">Bitcoin.it/wiki/Technical_background_of_Bitcoin_addresses</a>
+		<br/>
+		<a href="https://en.bitcoin.it/wiki/Private_key" target="_BLANK">Bitcoin.it/wiki/Private_key</a>
+		<br/>
+		<br/>
+		<h3>Generalized steps involved to generate a Bitcoin address</h3>
+		<div class="information">
+			1] Generate a Private key.<br/>
+				*By generating a Private key, you recieve both a Private and a Public key.<br/>
+			<br/>
+			2] Perform a SHA-256() Hashing operation on the public key, We will call this value <b>SHA256-PublicKey</b><br/>
+			<br/>
+			3] Perform a RIPEMD-160() Hashing operation on the <b>SHA256-PublicKey</b>, We will call this value <b>RIPEMD160-PublicKey</b><br/>
+			<br/>
+			4] Add <b>00</b> to the front of the <b>RIPEMD160-PublicKey</b> (Notes: We are describing generating bitcoin addresses, to generate a testnet address add a 6f instead and for namecoin add a 34 instead)<br/>
+			<br/>
+			5] Perform SHA-256() Hashing operation on the <b>RIPEMD160-PublicKey (with the <b>00</b> included)<br/>
+			<br/>
+
+			<span style="font-size:110%;">A visual representation of the proccess</span>
+			<br/>
+			<img src="https://en.bitcoin.it/w/images/en/thumb/9/9b/PubKeyToAddr.png/395px-PubKeyToAddr.png"/>
+		</div>
+		
+		<h3>Pseudo Code steps involved to generate a Bitcoin address</h3>
     </body>
 </html>
