@@ -6,6 +6,7 @@
 				margin-left:2em;
 				margin-bottom:2em;
 			}
+		
 			.pseudocode{
 				border:3px dashed #c6c6c6;
 				background-image: url('images/pseudocode.png');
@@ -28,11 +29,35 @@
 				
 				width:7em;
 			}
+		
+		
+			/* Menu */
+			#menu{
+				background:#c6c6c6;
+				padding:1em;
+				height:2em;
+			}
+			a.menuBtn{
+				float:left;
+				text-decoration:none;
+			}
+			a.menuBtn:hover{
+				float:left;
+				text-decoration:underline overline;
+			}
+			div.menuBtn{
+				padding:0.5em;
+				color:#FFF;
+				
+			}
 		</style>
     </head>
     <body>
 		<h1>Bitcoin Pseudocode Client - Open collaborative project</h1>
-		
+		<div id="menu">
+			<a href="/verifyaddress" class="menuBtn"><div class="menuBtn">Verify Bitcoin Address</div></a>
+			<a href="/createaddress" class="menuBtn"><div class="menuBtn">Create Bitcoin Address</div></a>
+		</div>
 		<br/><br/>
 		<h2>Verifying a Bitcoin address</h2>
 		<div class="information">
@@ -95,5 +120,12 @@
 		</div>
 		
 		<h3>Pseudo Code steps involved to generate a Bitcoin address</h3>
+		
+		
+		<h3>connect to bitcoin nodes</h3>
+		Resources List: <a href="https://en.bitcoin.it/wiki/Satoshi_Client_Node_Discovery" target="_BLANK">https://en.bitcoin.it/wiki/Satoshi_Client_Node_Discovery</a>
+		<br/>
+		<br/>
+		<br/>
     </body>
 </html>
