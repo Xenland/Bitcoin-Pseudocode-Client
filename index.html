@@ -1,98 +1,15 @@
 <html>
     <head>
         <title>Bitcoin Pseudocode Client</title>
-		<style type="text/css">
-			.information{
-				margin-left:2em;
-				margin-bottom:2em;
-			}
-		
-			.pseudocode{
-				border:3px dashed #c6c6c6;
-				background-image: url('images/pseudocode.png');
-				padding:0em 1em 1em 1em;
-				font-family:Century Gothic;
-			}
-		
-			.pseudocode-title{
-				color:#FFF;
-				background:#c6c6c6;
-				
-				font-size:120%;
-				font-family:‘Arial Black’;
-				
-				margin-top:1em;
-				margin-bottom:1em;
-				
-				
-				padding:0.5em;
-				
-				width:7em;
-			}
-		
-		
-			/* Menu */
-			#menu{
-				background:#c6c6c6;
-				padding:1em;
-				height:2em;
-			}
-			a.menuBtn{
-				float:left;
-				text-decoration:none;
-			}
-			a.menuBtn:hover{
-				float:left;
-				text-decoration:underline overline;
-			}
-			div.menuBtn{
-				padding:0.5em;
-				color:#FFF;
-				
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="main.css">
     </head>
     <body>
 		<h1>Bitcoin Pseudocode Client - Open collaborative project</h1>
 		<div id="menu">
-			<a href="/verifyaddress" class="menuBtn"><div class="menuBtn">Verify Bitcoin Address</div></a>
-			<a href="/createaddress" class="menuBtn"><div class="menuBtn">Create Bitcoin Address</div></a>
+			<a href="verifyaddress.html" class="menuBtn"><div class="menuBtn">Verify Bitcoin Address</div></a>
+			<a href="createaddress.html" class="menuBtn"><div class="menuBtn">Create Bitcoin Address</div></a>
 		</div>
 		<br/><br/>
-		<h2>Verifying a Bitcoin address</h2>
-		<div class="information">
-			*Bitcoin addresses can be up to 34 Characters.
-			<br/>
-			*Bitcoin addresses are most often 33 or 34 characters long with 34 being the max length. (Source: <a href="https://en.bitcoin.it/wiki/List_of_address_prefixes">Bitcoin.it/wiki/List of address prefixes</a>)
-		</div>
-		
-        <div class="pseudocode" style="width:30em;">
-			<div class="pseudocode-title">
-				Pseudo Code
-			</div>
-            <b style="color:blue;">input_address</b> = <span style="color:purple;">1PZoWjye1Xa1e1NSNYmKuxEJYGvcnJro7p</span>;
-            <br/>
-            <b style="color:blue;">address_valid</b> = <span style="color:purple;">true</span>;
-            <br/><br/>
-            <b>if</b> <b style="color:blue;">input_address</b> <b>contains</b> the following characters <i style="color:green;">0 O I l</i>
-            <br/>
-            <b>address_valid</b> = <span style="color:purple;">false</span>;
-            <br/><br/>
-            
-            <b>if</b> <b style="color:blue;">input_address</b> string length is <b>greater than</b> <i style="color:purple;">34</i>
-            <br/>
-            <b style="color:blue;">address_valid</b> = <span style="color:purple;"> false</span>;
-            <br/><br/>
-            
-            <b>if</b> <b style="color:blue;">input_address</b> first character is not a <i style="color:purple;">number 1</i>
-            <br/>
-            <b style="color:blue;">address_valid</b> = <span style="color:purple;"> false</span>;
-            <br/><br/>
-        
-            <b>return</b> <b style="color:blue;">address_valid</b><br/>
-        </div>
-		
-		<br/><br/><br/>
 		
 		<h2>Create a Bitcoin address</h2>
 		Resources List: <a href="https://en.bitcoin.it/wiki/Technical_background_of_Bitcoin_addresses" target="_BLANK">Bitcoin.it/wiki/Technical_background_of_Bitcoin_addresses</a>

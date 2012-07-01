@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Bitcoin Pseudo Documentation - Verify Address</title>
+		<link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+		<h1><a href="index.html">Bitcoin Pseudocode Client - Open collaborative project</a></h1>
+		<div id="menu">
+			<a href="verifyaddress.html" class="menuBtn"><div class="menuBtn">Verify Bitcoin Address</div></a>
+			<a href="createaddress.html" class="menuBtn"><div class="menuBtn">Create Bitcoin Address</div></a>
+		</div>
+		
+		<!-- Begin Content -->
+		<h2>Verifying a Bitcoin address</h2>
+		<div class="information">
+			<div style="margin-bottom:1em;">
+				<b>Sources</b><br/>
+				http://code.gogulski.com/bitcoin-php/bitcoin_8inc_source.html#l00174<br/>
+				https://en.bitcoin.it/wiki/Base58Check_encoding<br/>
+				https://bitcointools.appspot.com/<br/>
+			</div>
+
+			<div style="margin-bottom:1em;">
+				<b>Steps Required</b><br/>
+				Step1
+			</div>
+		</div>
+		
+        <div class="pseudocode" style="width:60em;">
+			<div class="pseudocode-title">
+				Verify Address in Pseudo Code
+			</div>
+			<br/>
+            <b style="color:blue;">Input Address</b> <i>=</i> <span style="color:purple;">1PZoWjye1Xa1e1NSNYmKuxEJYGvcnJro7p</span>
+            <br/>
+			<b style="color:blue;">Decoded Address</b> <i>=</i> <b>decodeToBase58(</b><span style="color:purple;font-weight:bold;">Input Address</span><b>)</b>
+			<br/>
+			<div style="color:#000;margin-left:1em;background:#e8e8e8;padding:0.2em;border:1px solid #000;">Note: Decoded Address now <i>represents</i> 6069343702728890138051083510044608105707838933778380636955</div>
+			<br/>
+			<b style="color:blue;">Hex Encoded Address</b> <i> =</i> <b>encodeToHex(</b><span style="color:purple;font-weight:bold;">Decoded Address</span><b>)</b>
+			<br/>
+			<b style="color:blue;">EncodedAddress</b> <i>=</i> <b>Replace all</b> <i>1</i> <b>with</b> <i>00</i> <b>found in</b> <b style="color:purple;">Hex Encoded Address</b><br/>
+			
+            <br/><br/>
+			<div style="margin-left:0.2em;">
+				<b>if</b> <b style="color:blue;">Input Address</b> <i>contains</i> any of the following characters <i style="color:green;">0 O I l</i>
+				<br/>
+				<b style="color:red;">Address is not valid</b>
+			</div>
+			<br/>
+            
+            <b>if</b> <b style="color:blue;">Input Address</b> string length is <b>greater than</b> <i style="color:purple;">34</i>
+            <br/>
+            <b style="color:blue;">address_valid</b> = <span style="color:purple;"> false</span>;
+            <br/><br/>
+            
+            <b>if</b> <b style="color:blue;">input_address</b> first character is not a <i style="color:purple;">number 1</i>
+            <br/>
+            <b style="color:blue;">address_valid</b> = <span style="color:purple;"> false</span>;
+            <br/><br/>
+        
+            <b>return</b> <b style="color:blue;">address_valid</b><br/>
+        </div>
+	</body>
+</html>

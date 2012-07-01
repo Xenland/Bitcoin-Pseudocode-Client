@@ -1,0 +1,49 @@
+.information{
+	margin-left:2em;
+	margin-bottom:2em;
+}
+
+.pseudocode{
+	border:3px dashed #c6c6c6;
+	background-image: url('images/pseudocode.png');
+	padding:0em 1em 1em 1em;
+	font-family:Century Gothic;
+}
+
+.pseudocode-title{
+	color:#FFF;
+	background:#c6c6c6;
+	
+	font-size:120%;
+	font-family:‘Arial Black’;
+	
+	margin-top:1em;
+	margin-bottom:1em;
+	
+	
+	padding:0.5em;
+	
+	margin-left:1em;
+	margin-right:1em;
+}
+
+
+/* Menu */
+#menu{
+	background:#c6c6c6;
+	padding:1em;
+	height:2em;
+}
+a.menuBtn{
+	float:left;
+	text-decoration:none;
+}
+a.menuBtn:hover{
+	float:left;
+	text-decoration:underline overline;
+}
+div.menuBtn{
+	padding:0.5em;
+	color:#FFF;
+	
+}
