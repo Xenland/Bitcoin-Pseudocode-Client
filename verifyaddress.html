@@ -35,11 +35,32 @@
             <br/>
 			<b style="color:blue;">Decoded Address</b> <i>=</i> <b>decodeToBase58(</b><span style="color:purple;font-weight:bold;">Input Address</span><b>)</b>
 			<br/>
-			<div style="color:#000;margin-left:1em;background:#e8e8e8;padding:0.2em;border:1px solid #000;">Note: Decoded Address now <i>represents</i> 6069343702728890138051083510044608105707838933778380636955</div>
+			<div class="note">Note: Decoded Address now <i>represents</i> 6069343702728890138051083510044608105707838933778380636955</div>
 			<br/>
+			
 			<b style="color:blue;">Hex Encoded Address</b> <i> =</i> <b>encodeToHex(</b><span style="color:purple;font-weight:bold;">Decoded Address</span><b>)</b>
 			<br/>
-			<b style="color:blue;">EncodedAddress</b> <i>=</i> <b>Replace all</b> <i>1</i> <b>with</b> <i>00</i> <b>found in</b> <b style="color:purple;">Hex Encoded Address</b><br/>
+			<div class="note">Note: Hex Encoded Address now <i>represents</i> F786E7A97DAFC50A6E5E82BF454847069D958B12F340431B</div>
+			<br/>
+			
+			<b style="color:blue;">Encoded Address</b> <i>=</i> append <i>00</i> to the prefix of <b style="color:purple;font-weight:bold;">Hex Encoded Address</b>
+			<br/>
+			<div class="note">Note: Encoded Address now <i>represents</i> 00F786E7A97DAFC50A6E5E82BF454847069D958B12F340431B</div>
+			<br/>
+			
+			<b style="color:blue;">Encoded Address</b> <i>=</i> <b>remove the last 8 characters</b>
+			<br/>
+			<div class="note">Note: Encoded Address now <i>represents</b> 00F786E7A97DAFC50A6E5E82BF454847069D958B12</div>
+			<br/>
+			
+			<b style="color:blue;">Encoded Address</b> <i>=</i> <b>hexToBinary(</b><span style="color:purple;font-weight:bold;">Encoded Address</span><b>)</b>
+			<br/>
+			<div class="note">	Note: Encoded Address now <i>represents</i> 11110100010101001000010001110000011010011101100101011000000000000000</div>
+			<br/>
+			
+			<b style="color:blue;">Hashed Address</b> <i>=</b> <b>sha256(</b><b>sha256(</b><span style="color:purple;font-weight:bold;">Encoded Address</span><b>)</b><b>)</b>
+			<div class="note">	Note: Hashed Address now <i>represents</i> F340431BECBFAC4FD36D44C506BC092B500114EBA14FA75DCF7551AC61496A67</div>
+			<br/>
 			
             <br/><br/>
 			<div style="margin-left:0.2em;">
