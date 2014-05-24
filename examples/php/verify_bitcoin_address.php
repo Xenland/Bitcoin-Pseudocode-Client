@@ -11,7 +11,7 @@ function appendHexZeros($inputAddress, $hexEncodedAddress){
 	for ($i = 0; $i < strlen($inputAddress) && $inputAddress[$i] == "1"; $i++) {
 		$hexEncodedAddress = "00" . $hexEncodedAddress;
 	}
-	if (strlen($return) % 2 != 0) {
+	if (strlen($hexEncodedAddress) % 2 != 0) {
 		$hexEncodedAddress = "0" . $hexEncodedAddress;
 	}
 	
