@@ -22,4 +22,4 @@ public class CommandLine {
         System.out.println("WIF Private key: "+temp[1]);
         System.out.println("Bitcoin Address: "+temp[2]);
         }
-}
+}35hK24tcLEWcgNA4JxpvbkNkoAcDGqQPsP
